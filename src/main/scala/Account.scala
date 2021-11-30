@@ -20,6 +20,7 @@ abstract class Account(id: UUID, name: String, dateOpened: LocalDateTime){
   def setName(name:String): Unit = this._name = name
   override def toString:String = s"Account id=${_id}, name=${_name}, dateOpened=${_dateOpened}"
 }
+
 class CreditAccount(name:String) extends Account(name: String){
   override val _accountType: String = "CREDIT"
   override def toString:String = s"Account id=${getId}, name=${getName}, dateOpened=${getDateOpened}, " +
